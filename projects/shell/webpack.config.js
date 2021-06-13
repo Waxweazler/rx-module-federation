@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
-        port: 5000
+        port: 3001
     },
     module: {
         rules: [
@@ -25,7 +25,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'shell',
             remotes: {
-                mfe: 'mfe@//localhost:3000/remoteEntry.js'
+                mfe: 'mfe@//localhost:3002/remoteEntry.js'
             },
             shared: {
                 react: {singleton: true},
